@@ -5,13 +5,13 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Audio Leaks - Confidential Audio Archive',
-  description: 'A satirical platform for humorous audio recordings and leaks. Entertainment purposes only.',
-  keywords: 'audio leaks, satirical, humor, entertainment, confidential, archive',
-  authors: [{ name: 'Audio Leaks Team' }],
+  title: 'Filtraciones de Audio - Archivo Confidencial de Audio',
+  description: 'Una plataforma satírica para grabaciones de audio humorísticas y filtraciones. Solo para entretenimiento.',
+  keywords: 'filtraciones de audio, satírico, humor, entretenimiento, confidencial, archivo',
+  authors: [{ name: 'Equipo de Filtraciones de Audio' }],
   openGraph: {
-    title: 'Audio Leaks - Confidential Audio Archive',
-    description: 'A satirical platform for humorous audio recordings and leaks.',
+    title: 'Filtraciones de Audio - Archivo Confidencial de Audio',
+    description: 'Una plataforma satírica para grabaciones de audio humorísticas y filtraciones.',
     type: 'website',
   },
 }
@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={inter.className}>
         {children}
       </body>

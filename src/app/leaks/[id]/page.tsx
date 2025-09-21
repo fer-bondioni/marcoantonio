@@ -49,7 +49,7 @@ export default function LeakDetail() {
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
-            <p className="text-gray-600 dark:text-gray-400">Loading leak details...</p>
+            <p className="text-gray-600 dark:text-gray-400">Cargando detalles de la filtración...</p>
           </div>
         </div>
       </div>
@@ -63,16 +63,16 @@ export default function LeakDetail() {
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Leak Not Found
+              Filtración No Encontrada
             </h1>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
-              The requested leak could not be found.
+              La filtración solicitada no se pudo encontrar.
             </p>
             <Link
               href="/"
               className="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition-colors"
             >
-              Return Home
+              Volver al Inicio
             </Link>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function LeakDetail() {
           className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8 transition-colors"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Home
+          Volver al Inicio
         </Link>
 
         {/* Leak Header */}
@@ -105,7 +105,7 @@ export default function LeakDetail() {
               </div>
             </div>
             {topic && (
-              <p className="text-red-100 mt-2">Topic: {topic.name}</p>
+              <p className="text-red-100 mt-2">Tema: {topic.name}</p>
             )}
           </div>
 
@@ -125,7 +125,7 @@ export default function LeakDetail() {
             <div className="mb-6">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                 <Volume2 className="h-5 w-5 mr-2 text-red-600" />
-                Audio Recording
+                Grabación de Audio
               </h2>
               <AudioPlayer audioUrl={leak.audio_url} title={leak.title} />
             </div>
@@ -133,7 +133,7 @@ export default function LeakDetail() {
             {/* Synopsis */}
             <div className="mb-6">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Synopsis
+                Sinopsis
               </h2>
               <div className="synopsis">
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -147,7 +147,7 @@ export default function LeakDetail() {
               <div className="mb-6">
                 <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                   <FileText className="h-5 w-5 mr-2 text-red-600" />
-                  Transcript
+                  Transcripción
                 </h2>
                 <div className="transcript">
                   <p className="text-gray-800 dark:text-gray-200 leading-relaxed">
@@ -160,20 +160,20 @@ export default function LeakDetail() {
             {/* Metadata */}
             <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
               <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
-                Leak Information
+                Información de la Filtración
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div>
-                  <span className="font-medium">Leak ID:</span> {leak.id}
+                  <span className="font-medium">ID de Filtración:</span> {leak.id}
                 </div>
                 <div>
-                  <span className="font-medium">Created:</span> {new Date(leak.created_at).toLocaleString()}
+                  <span className="font-medium">Creado:</span> {new Date(leak.created_at).toLocaleString()}
                 </div>
                 <div>
-                  <span className="font-medium">Updated:</span> {new Date(leak.updated_at).toLocaleString()}
+                  <span className="font-medium">Actualizado:</span> {new Date(leak.updated_at).toLocaleString()}
                 </div>
                 <div>
-                  <span className="font-medium">Topic:</span> {topic?.name || 'Unknown'}
+                  <span className="font-medium">Tema:</span> {topic?.name || 'Desconocido'}
                 </div>
               </div>
             </div>

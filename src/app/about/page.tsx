@@ -15,10 +15,10 @@ export default function AboutPage() {
             <Shield className="h-16 w-16 text-red-600 mr-4" />
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
-                About Audio Leaks
+                Acerca de Filtraciones de Audio
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 mt-2">
-                Confidential Audio Archive
+                Archivo Confidencial de Audio
               </p>
             </div>
           </div>
@@ -28,14 +28,14 @@ export default function AboutPage() {
         <div className="prose prose-lg max-w-none">
           <div className="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Mission Statement
+              Declaración de Misión
             </h2>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              Audio Leaks is a satirical platform dedicated to the preservation and dissemination 
-              of humorous audio recordings that reveal the lighter side of public discourse. 
-              Our mission is to provide entertainment through carefully curated audio content 
-              that showcases the absurd, the unexpected, and the downright hilarious moments 
-              that occur when people think no one is listening.
+              Filtraciones de Audio es una plataforma satírica dedicada a la preservación y difusión 
+              de grabaciones de audio humorísticas que revelan el lado más ligero del discurso público. 
+              Nuestra misión es proporcionar entretenimiento a través de contenido de audio cuidadosamente 
+              seleccionado que muestra lo absurdo, lo inesperado y los momentos francamente hilarantes 
+              que ocurren cuando la gente piensa que nadie está escuchando.
             </p>
             
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6 mb-6">
@@ -43,12 +43,12 @@ export default function AboutPage() {
                 <AlertTriangle className="h-6 w-6 text-red-600 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-red-800 dark:text-red-200 mb-2">
-                    Important Disclaimer
+                    Descargo de Responsabilidad Importante
                   </h3>
                   <p className="text-red-700 dark:text-red-300">
-                    This website is created purely for entertainment purposes. All content is 
-                    fictional and satirical in nature. No real audio recordings of private 
-                    conversations are used or distributed through this platform.
+                    Este sitio web se crea únicamente con fines de entretenimiento. Todo el contenido es 
+                    ficticio y de naturaleza satírica. No se utilizan ni distribuyen grabaciones de audio 
+                    reales de conversaciones privadas a través de esta plataforma.
                   </p>
                 </div>
               </div>
@@ -61,11 +61,11 @@ export default function AboutPage() {
               <div className="flex items-center mb-4">
                 <Volume2 className="h-8 w-8 text-red-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Audio Playback
+                  Reproducción de Audio
                 </h3>
               </div>
               <p className="text-gray-700 dark:text-gray-300">
-                High-quality audio player with full controls for playback, volume, and seeking.
+                Reproductor de audio de alta calidad con controles completos para reproducción, volumen y búsqueda.
               </p>
             </div>
 
@@ -73,11 +73,11 @@ export default function AboutPage() {
               <div className="flex items-center mb-4">
                 <FileText className="h-8 w-8 text-red-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Transcripts
+                  Transcripciones
                 </h3>
               </div>
               <p className="text-gray-700 dark:text-gray-300">
-                Complete transcripts for all audio content with easy-to-read formatting.
+                Transcripciones completas para todo el contenido de audio con formato fácil de leer.
               </p>
             </div>
 
@@ -85,11 +85,11 @@ export default function AboutPage() {
               <div className="flex items-center mb-4">
                 <Shield className="h-8 w-8 text-red-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Secure Archive
+                  Archivo Seguro
                 </h3>
               </div>
               <p className="text-gray-700 dark:text-gray-300">
-                Professional-grade security and organization for all confidential content.
+                Seguridad y organización de nivel profesional para todo el contenido confidencial.
               </p>
             </div>
 
@@ -97,11 +97,11 @@ export default function AboutPage() {
               <div className="flex items-center mb-4">
                 <Users className="h-8 w-8 text-red-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Community
+                  Comunidad
                 </h3>
               </div>
               <p className="text-gray-700 dark:text-gray-300">
-                Join a community of audio enthusiasts and humor aficionados.
+                Únete a una comunidad de entusiastas del audio y aficionados al humor.
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
           {/* Technology Stack */}
           <div className="bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Technology Stack
+              Stack Tecnológico
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -126,7 +126,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                  Backend & Database
+                  Backend y Base de Datos
                 </h3>
                 <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                   <li>• Supabase for database</li>
@@ -142,10 +142,10 @@ export default function AboutPage() {
           {/* Footer */}
           <div className="text-center mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
             <p className="text-gray-500 dark:text-gray-400 mb-2">
-              Audio Leaks - Confidential Audio Archive
+              Filtraciones de Audio - Archivo Confidencial de Audio
             </p>
             <p className="text-sm text-gray-400 dark:text-gray-500">
-              Built with Next.js, Supabase, and a healthy dose of humor.
+              Construido con Next.js, Supabase y una dosis saludable de humor.
             </p>
           </div>
         </div>

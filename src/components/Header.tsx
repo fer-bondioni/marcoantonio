@@ -14,20 +14,20 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <Shield className="h-8 w-8" />
             <div className="flex flex-col">
-              <span className="text-xl font-bold">AUDIO LEAKS</span>
-              <span className="text-xs text-red-200">Confidential Audio Archive</span>
+              <span className="text-xl font-bold">FILTRACIONES DE AUDIO</span>
+              <span className="text-xs text-red-200">Archivo Confidencial de Audio</span>
             </div>
           </Link>
 
           <nav className="hidden md:flex space-x-8">
             <Link href="/" className="hover:text-red-200 transition-colors">
-              Home
+              Inicio
             </Link>
             <Link href="/topics" className="hover:text-red-200 transition-colors">
-              Topics
+              Temas
             </Link>
             <Link href="/about" className="hover:text-red-200 transition-colors">
-              About
+              Acerca de
             </Link>
           </nav>
 
@@ -43,13 +43,13 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-red-500">
             <nav className="flex flex-col space-y-4">
               <Link href="/" className="hover:text-red-200 transition-colors">
-                Home
+                Inicio
               </Link>
               <Link href="/topics" className="hover:text-red-200 transition-colors">
-                Topics
+                Temas
               </Link>
               <Link href="/about" className="hover:text-red-200 transition-colors">
-                About
+                Acerca de
               </Link>
             </nav>
           </div>

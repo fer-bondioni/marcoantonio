@@ -42,7 +42,7 @@ export default function TopicsPage() {
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
-            <p className="text-gray-600 dark:text-gray-400">Loading topics...</p>
+            <p className="text-gray-600 dark:text-gray-400">Cargando temas...</p>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function TopicsPage() {
           className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8 transition-colors"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Home
+          Volver al Inicio
         </Link>
 
         {/* Header */}
@@ -69,10 +69,10 @@ export default function TopicsPage() {
             <FileAudio className="h-16 w-16 text-red-600 mr-4" />
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
-                All Topics
+                Todos los Temas
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 mt-2">
-                Browse leaks by category
+                Explorar filtraciones por categoría
               </p>
             </div>
           </div>
@@ -93,10 +93,10 @@ export default function TopicsPage() {
           <div className="text-center py-12">
             <FileAudio className="h-16 w-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              No Topics Found
+              No se Encontraron Temas
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              No topics are available at the moment.
+              No hay temas disponibles en este momento.
             </p>
           </div>
         )}

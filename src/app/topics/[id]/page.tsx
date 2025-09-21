@@ -56,7 +56,7 @@ export default function TopicDetail() {
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
-            <p className="text-gray-600 dark:text-gray-400">Loading topic...</p>
+            <p className="text-gray-600 dark:text-gray-400">Cargando tema...</p>
           </div>
         </div>
       </div>
@@ -70,16 +70,16 @@ export default function TopicDetail() {
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Topic Not Found
+              Tema No Encontrado
             </h1>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
-              The requested topic could not be found.
+              El tema solicitado no se pudo encontrar.
             </p>
             <Link
               href="/topics"
               className="bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition-colors"
             >
-              Browse Topics
+              Explorar Temas
             </Link>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function TopicDetail() {
           className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8 transition-colors"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Topics
+          Volver a Temas
         </Link>
 
         {/* Topic Header */}
@@ -110,7 +110,7 @@ export default function TopicDetail() {
                 {topic.name}
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 mt-2">
-                {leaks.length} {leaks.length === 1 ? 'leak' : 'leaks'} available
+                {leaks.length} {leaks.length === 1 ? 'filtración' : 'filtraciones'} disponibles
               </p>
             </div>
           </div>
@@ -131,10 +131,10 @@ export default function TopicDetail() {
           <div className="text-center py-12">
             <FileAudio className="h-16 w-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              No Leaks Available
+              No hay Filtraciones Disponibles
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              No leaks are available for this topic yet.
+              No hay filtraciones disponibles para este tema aún.
             </p>
           </div>
         )}

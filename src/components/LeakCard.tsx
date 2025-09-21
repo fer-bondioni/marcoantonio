@@ -50,13 +50,13 @@ export default function LeakCard({ leak }: LeakCardProps) {
             {leak.transcript && (
               <div className="flex items-center">
                 <FileText className="h-4 w-4 mr-1" />
-                Transcript
+                Transcripción
               </div>
             )}
             {leak.image_url && (
             <div className="flex items-center">
               <Image className="h-4 w-4 mr-1" />
-              Image
+              Imagen
             </div>
             )}
           </div>
@@ -65,7 +65,7 @@ export default function LeakCard({ leak }: LeakCardProps) {
             href={`/leaks/${leak.id}`}
             className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors text-sm font-medium"
           >
-            View Details
+            Ver Detalles
           </Link>
         </div>
       </div>
