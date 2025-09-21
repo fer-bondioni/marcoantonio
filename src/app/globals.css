@@ -92,3 +92,42 @@ a {
 .leak-card:hover {
   @apply border-red-500 transform -translate-y-1;
 }
+
+/* Main Card Styles */
+.main-card {
+  @apply bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hover:border-red-500 transition-all duration-500;
+}
+
+.main-card:hover {
+  @apply transform -translate-y-2;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Locomotive Scroll Styles */
+[data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-section] {
+  min-height: 100vh;
+}
+
+/* Smooth hover effects */
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+}

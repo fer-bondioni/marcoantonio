@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import LocomotiveScrollProvider from '@/components/LocomotiveScrollProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,8 +24,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
-        {children}
+      <body className={inter.className} suppressHydrationWarning={true}>
+        <LocomotiveScrollProvider>
+          {children}
+        </LocomotiveScrollProvider>
       </body>
     </html>
   )
