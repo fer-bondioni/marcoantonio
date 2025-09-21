@@ -25,33 +25,33 @@ CREATE INDEX idx_leaks_created_at ON leaks(created_at DESC);
 
 -- Insert sample data
 INSERT INTO topics (name, description) VALUES
-('Political Scandals', 'Audio recordings of political figures in compromising situations'),
-('Corporate Secrets', 'Behind-the-scenes corporate conversations and decisions'),
-('Celebrity Gossip', 'Private conversations and revelations from public figures'),
-('Tech Industry', 'Internal discussions and leaked tech company communications');
+('Escándalos Políticos', 'Grabaciones de audio de figuras políticas en situaciones comprometedoras'),
+('Secretos Corporativos', 'Conversaciones y decisiones corporativas detrás de escena'),
+('Chismes de Celebridades', 'Conversaciones privadas y revelaciones de figuras públicas'),
+('Industria Tecnológica', 'Discusiones internas y comunicaciones filtradas de empresas tecnológicas');
 
 INSERT INTO leaks (topic_id, title, audio_url, transcript, image_url, synopsis) VALUES
 (
-  (SELECT id FROM topics WHERE name = 'Political Scandals' LIMIT 1),
-  'Mayor''s Late Night Confession',
+  (SELECT id FROM topics WHERE name = 'Escándalos Políticos' LIMIT 1),
+  'Confesión Nocturna del Alcalde',
   '/audio/mayor-confession.mp3',
-  'MAYOR: "I never thought anyone would find out about the parking meter scandal..."',
+  'ALCALDE: "Nunca pensé que alguien descubriría el escándalo de los parquímetros..."',
   '/images/mayor-thumbnail.jpg',
-  'A shocking audio recording reveals the mayor discussing a parking meter embezzlement scheme during a late-night phone call.'
+  'Una grabación de audio impactante revela al alcalde discutiendo un esquema de malversación de parquímetros durante una llamada telefónica nocturna.'
 ),
 (
-  (SELECT id FROM topics WHERE name = 'Corporate Secrets' LIMIT 1),
-  'CEO''s Honest Assessment',
+  (SELECT id FROM topics WHERE name = 'Secretos Corporativos' LIMIT 1),
+  'Evaluación Honesta del CEO',
   '/audio/ceo-assessment.mp3',
-  'CEO: "Our product is basically garbage, but people keep buying it..."',
+  'CEO: "Nuestro producto es básicamente basura, pero la gente sigue comprándolo..."',
   '/images/ceo-thumbnail.jpg',
-  'An internal meeting recording shows the CEO candidly discussing product quality issues and customer satisfaction.'
+  'Una grabación de reunión interna muestra al CEO discutiendo francamente los problemas de calidad del producto y la satisfacción del cliente.'
 ),
 (
-  (SELECT id FROM topics WHERE name = 'Celebrity Gossip' LIMIT 1),
-  'Actor''s Real Opinion on Co-Stars',
+  (SELECT id FROM topics WHERE name = 'Chismes de Celebridades' LIMIT 1),
+  'Opinión Real del Actor sobre sus Compañeros',
   '/audio/actor-opinion.mp3',
-  'ACTOR: "Working with them was like trying to act opposite a brick wall..."',
+  'ACTOR: "Trabajar con ellos fue como tratar de actuar frente a una pared de ladrillos..."',
   '/images/actor-thumbnail.jpg',
-  'A leaked recording from a private conversation reveals an actor''s brutally honest thoughts about their co-stars.'
+  'Una grabación filtrada de una conversación privada revela los pensamientos brutalmente honestos de un actor sobre sus compañeros de reparto.'
 );

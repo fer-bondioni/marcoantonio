@@ -5,7 +5,7 @@ import Header from '@/components/Header'
 import TopicCard from '@/components/TopicCard'
 import LeakCard from '@/components/LeakCard'
 import ThreeBackground from '@/components/ThreeBackground'
-import { supabase, Topic, Leak, mockTopics, mockLeaks } from '@/lib/supabase'
+import { supabase, Topic, Leak } from '@/lib/supabase'
 import { Shield, Volume2, AlertTriangle } from 'lucide-react'
 
 export default function Home() {
@@ -20,39 +20,37 @@ export default function Home() {
   const fetchData = async () => {
     try {
       // Check if Supabase is configured
-      if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co') {
-        // Fetch topics
-        const { data: topicsData, error: topicsError } = await supabase
-          .from('topics')
-          .select('*')
-          .order('created_at', { ascending: false })
-
-        if (topicsError) throw topicsError
-
-        // Fetch recent leaks
-        const { data: leaksData, error: leaksError } = await supabase
-          .from('leaks')
-          .select(`
-            *,
-            topics (name)
-          `)
-          .order('created_at', { ascending: false })
-          .limit(6)
-
-        if (leaksError) throw leaksError
-
-        setTopics(topicsData || [])
-        setRecentLeaks(leaksData || [])
-      } else {
-        // Use mock data
-        setTopics(mockTopics)
-        setRecentLeaks(mockLeaks)
+      if (!process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL === 'https://placeholder.supabase.co') {
+        throw new Error('Supabase not configured')
       }
+
+      // Fetch topics
+      const { data: topicsData, error: topicsError } = await supabase
+        .from('topics')
+        .select('*')
+        .order('created_at', { ascending: false })
+
+      if (topicsError) throw topicsError
+
+      // Fetch recent leaks
+      const { data: leaksData, error: leaksError } = await supabase
+        .from('leaks')
+        .select(`
+          *,
+          topics (name)
+        `)
+        .order('created_at', { ascending: false })
+        .limit(6)
+
+      if (leaksError) throw leaksError
+
+      setTopics(topicsData || [])
+      setRecentLeaks(leaksData || [])
     } catch (error) {
       console.error('Error fetching data:', error)
-      // Fallback to mock data
-      setTopics(mockTopics)
-      setRecentLeaks(mockLeaks)
+      // Set empty arrays if there's an error
+      setTopics([])
+      setRecentLeaks([])
     } finally {
       setLoading(false)
     }
@@ -84,7 +82,7 @@ export default function Home() {
             <Shield className="h-16 w-16 text-red-600 mr-4" />
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
-                FILTRACIONES DE AUDIO
+                MARCO ANTONIO LEAKS
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-400 mt-2">
                 Archivo Confidencial de Audio
