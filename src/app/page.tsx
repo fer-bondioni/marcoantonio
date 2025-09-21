@@ -5,7 +5,7 @@ import Header from '@/components/Header'
 import TopicCard from '@/components/TopicCard'
 import LeakCard from '@/components/LeakCard'
 import ThreeBackground from '@/components/ThreeBackground'
-import { supabase, Topic, Leak } from '@/lib/supabase'
+import { supabase, Topic, Leak, mockTopics, mockLeaks } from '@/lib/supabase'
 import { Shield, Volume2, AlertTriangle } from 'lucide-react'
 
 export default function Home() {
@@ -19,30 +19,40 @@ export default function Home() {
 
   const fetchData = async () => {
     try {
-      // Fetch topics
-      const { data: topicsData, error: topicsError } = await supabase
-        .from('topics')
-        .select('*')
-        .order('created_at', { ascending: false })
+      // Check if Supabase is configured
+      if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co') {
+        // Fetch topics
+        const { data: topicsData, error: topicsError } = await supabase
+          .from('topics')
+          .select('*')
+          .order('created_at', { ascending: false })
 
-      if (topicsError) throw topicsError
+        if (topicsError) throw topicsError
 
-      // Fetch recent leaks
-      const { data: leaksData, error: leaksError } = await supabase
-        .from('leaks')
-        .select(`
-          *,
-          topics (name)
-        `)
-        .order('created_at', { ascending: false })
-        .limit(6)
+        // Fetch recent leaks
+        const { data: leaksData, error: leaksError } = await supabase
+          .from('leaks')
+          .select(`
+            *,
+            topics (name)
+          `)
+          .order('created_at', { ascending: false })
+          .limit(6)
 
-      if (leaksError) throw leaksError
+        if (leaksError) throw leaksError
 
-      setTopics(topicsData || [])
-      setRecentLeaks(leaksData || [])
+        setTopics(topicsData || [])
+        setRecentLeaks(leaksData || [])
+      } else {
+        // Use mock data
+        setTopics(mockTopics)
+        setRecentLeaks(mockLeaks)
+      }
     } catch (error) {
       console.error('Error fetching data:', error)
+      // Fallback to mock data
+      setTopics(mockTopics)
+      setRecentLeaks(mockLeaks)
     } finally {
       setLoading(false)
     }

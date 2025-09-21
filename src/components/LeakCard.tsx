@@ -1,24 +1,18 @@
 'use client'
 
-import { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import { Play, FileText, Image, Calendar } from 'lucide-react'
 import { Leak } from '@/lib/supabase'
 
 interface LeakCardProps {
   leak: Leak
-  showTopic?: boolean
 }
 
-export default function LeakCard({ leak, showTopic = false }: LeakCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
+export default function LeakCard({ leak }: LeakCardProps) {
 
   return (
-    <div
-      className="leak-card"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className="leak-card">
       {leak.image_url && (
         <div className="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
           <img
@@ -60,10 +54,10 @@ export default function LeakCard({ leak, showTopic = false }: LeakCardProps) {
               </div>
             )}
             {leak.image_url && (
-              <div className="flex items-center">
-                <Image className="h-4 w-4 mr-1" />
-                Image
-              </div>
+            <div className="flex items-center">
+              <Image className="h-4 w-4 mr-1" />
+              Image
+            </div>
             )}
           </div>
 

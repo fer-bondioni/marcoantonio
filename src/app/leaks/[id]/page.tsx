@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation'
 import Header from '@/components/Header'
 import AudioPlayer from '@/components/AudioPlayer'
 import { supabase, Leak, Topic } from '@/lib/supabase'
-import { ArrowLeft, Calendar, FileText, Image, Volume2 } from 'lucide-react'
+import { ArrowLeft, Calendar, FileText, Volume2 } from 'lucide-react'
 import Link from 'next/link'
 
 export default function LeakDetail() {
